@@ -1,0 +1,33 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "workspaces": [
+    "api",
+    "app"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build --workspace=app",
+    "start": "npm run start --workspace=api"
+  },
+  "devDependencies": {
+    "standard": "16.0.3",
+    "eslint-plugin-cypress": "2.11.3"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json",
+    "env": {
+      "jest": true,
+      "cypress/globals": true
+    },
+    "plugins": [
+      "cypress"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+

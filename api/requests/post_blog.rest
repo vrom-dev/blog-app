@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/blogs/ 
+content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhbmFicmFtb3YiLCJpZCI6IjYwOGZkOThlMDQ0ZGUxM2NiODMzNWM5NyIsImlhdCI6MTYyMDA0MDc5Nn0.J6XgZk_APv2AIoohWbZZBpFbV0WOlPKPfc3YuEAhME0
+
+{
+  "title": "Redux",
+  "author": "Dan Abramov",
+  "url": "http://www.redux.com",
+  "likes": 15
+}
