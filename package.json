@@ -7,16 +7,23 @@
     "api",
     "app"
   ],
+  "engines": {
+    "node": "15",
+    "npm": "7.9.0"
+  },
   "main": "index.js",
   "scripts": {
-    "build": "npm run build --workspace=app",
-    "start": "npm run start --workspace=api"
+    "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=app",
+    "start": "npm run start --workspace=api",
+    "lint": "eslint ./api ./app",
+    "dev:api": "npm run build && npm run dev --workspace=api"
   },
   "devDependencies": {
     "standard": "16.0.3",
     "eslint-plugin-cypress": "2.11.3"
   },
   "eslintConfig": {
+    "ignorePatterns": "build",
     "extends": "./node_modules/standard/eslintrc.json",
     "env": {
       "jest": true,
